@@ -48,3 +48,20 @@ function handleClick(event) {
 }
 
 btn.addEventListener("click", handleClick);
+
+
+const container = document.getElementById("container");
+const paragraph = document.createElement("p");
+paragraph.textContent = "I am leaving DOM";
+container.appendChild(paragraph);
+
+const list = document.createElement("li");
+const list1 = document.createElement("li");
+const ulist = document.createElement("ul");
+list.textContent= "Learn Javascript";
+list1.textContent="Learn DOM";
+
+ulist.appendChild(list);
+ulist.appendChild(list1);
+container.appendChild(ulist);
+list1.remove();
